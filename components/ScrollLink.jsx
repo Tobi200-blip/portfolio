@@ -1,6 +1,6 @@
 "use client";
 
-export default function ScrollLink({ to, onClick, className = "", children }) {
+export default function ScrollLink({ to, onClick, offset = 24, className = "", children }) {
   const handleClick = (e) => {
     e.preventDefault();
     if (onClick) onClick();
@@ -12,7 +12,7 @@ export default function ScrollLink({ to, onClick, className = "", children }) {
 
     const el = document.getElementById(to);
     if (!el) return;
-    const y = el.getBoundingClientRect().top + window.scrollY - 72;
+    const y = el.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 

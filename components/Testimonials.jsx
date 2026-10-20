@@ -21,30 +21,30 @@ export default function Testimonials({ items }) {
   const next = () => setIndex((v) => (v + 1) % count);
 
   const arrow =
-    "flex h-10 w-10 items-center justify-center rounded-full border border-neutral-700 text-neutral-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-400/60 hover:text-white active:scale-95";
+    "flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-[#0f3d3e] active:scale-95";
 
   return (
     <div
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
-      className="mx-auto max-w-2xl rounded-3xl border border-neutral-800 bg-neutral-900/40 p-8 text-center sm:p-12"
+      className="rounded-3xl bg-[#0f3d3e] p-8 text-white sm:p-10"
     >
-      <div className="flex min-h-[200px] items-center justify-center">
+      <p className="text-xs tracking-[0.2em] text-emerald-100/70">KIND WORDS</p>
+
+      <div className="mt-4 min-h-[170px]">
         <AnimatePresence mode="wait">
           <motion.figure
             key={index}
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
+            exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <blockquote className="text-lg leading-relaxed text-neutral-200 sm:text-xl">
-              “{t.quote}”
-            </blockquote>
-            <figcaption className="mt-6 text-sm text-neutral-500">
-              <span className="text-neutral-300">{t.name}</span>, {t.role}
+            <blockquote className="text-xl leading-relaxed sm:text-2xl">“{t.quote}”</blockquote>
+            <figcaption className="mt-6 text-sm text-emerald-50/70">
+              <span className="font-semibold text-white">{t.name}</span>, {t.role}
               {t.sample && (
-                <span className="ml-2 rounded-full border border-amber-500/40 px-2 py-0.5 text-xs text-amber-400">
+                <span className="ml-2 rounded-full border border-amber-300/50 px-2 py-0.5 text-xs text-amber-200">
                   Sample
                 </span>
               )}
@@ -54,11 +54,14 @@ export default function Testimonials({ items }) {
       </div>
 
       {count > 1 && (
-        <div className="mt-8 flex items-center justify-center gap-5">
+        <div className="mt-6 flex items-center gap-4">
           <button type="button" onClick={prev} aria-label="Previous testimonial" className={arrow}>
             ←
           </button>
-          <div className="flex gap-2">
+          <button type="button" onClick={next} aria-label="Next testimonial" className={arrow}>
+            →
+          </button>
+          <div className="ml-2 flex gap-2">
             {items.map((_, i) => (
               <button
                 key={i}
@@ -66,14 +69,11 @@ export default function Testimonials({ items }) {
                 onClick={() => setIndex(i)}
                 aria-label={`Show testimonial ${i + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  i === index ? "w-6 bg-indigo-400" : "w-2 bg-neutral-700 hover:bg-neutral-500"
+                  i === index ? "w-6 bg-[#ff7a59]" : "w-2 bg-white/30 hover:bg-white/60"
                 }`}
               />
             ))}
           </div>
-          <button type="button" onClick={next} aria-label="Next testimonial" className={arrow}>
-            →
-          </button>
         </div>
       )}
     </div>
