@@ -43,11 +43,6 @@ export default function Testimonials({ items }) {
             <blockquote className="text-xl leading-relaxed sm:text-2xl">“{t.quote}”</blockquote>
             <figcaption className="mt-6 text-sm text-emerald-50/70">
               <span className="font-semibold text-white">{t.name}</span>, {t.role}
-              {t.sample && (
-                <span className="ml-2 rounded-full border border-amber-300/50 px-2 py-0.5 text-xs text-amber-200">
-                  Sample
-                </span>
-              )}
             </figcaption>
           </motion.figure>
         </AnimatePresence>

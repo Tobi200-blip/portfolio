@@ -29,6 +29,7 @@ export const projects = [
   {
     name: "VizaPal",
     url: "https://vizapal.com",
+    image: "/projects/vizapal.png",
     tagline: "AI immigration guide",
     tags: ["AI", "Next.js", "Tailwind"],
     problem:
@@ -41,6 +42,7 @@ export const projects = [
   {
     name: "Everything Migration",
     url: "https://everythingmigration.com",
+    image: "/projects/everythingmigration.png",
     tagline: "Canada immigration pathways platform",
     tags: ["Content platform", "Calculators", "SEO"],
     problem:
@@ -48,11 +50,12 @@ export const projects = [
     built:
       "A decision-support platform with pathway guides, a regularly updated blog, and free tools including an Express Entry CRS calculator and a language score converter.",
     result:
-      "A growing content platform with two free calculators and fresh guides that give applicants a clear starting point.",
+      "A growing content platform with two free CRS calculators and fresh guides that give applicants a clear starting point.",
   },
   {
     name: "CalcMerge",
     url: "https://calcmerge.com",
+    image: "/projects/calcmerge.png",
     tagline: "Free online calculators and converters",
     tags: ["React", "Tailwind", "Utility tools"],
     problem:
@@ -64,7 +67,8 @@ export const projects = [
   },
   {
     name: "AllPetLofts",
-    url: "https://allpetlofts.com",
+    url: "https://petwell-five.vercel.app",
+    image: "/projects/allpetlofts.png",
     tagline: "A home for dog, cat and bird lovers",
     tags: ["Next.js", "Tailwind", "Content site"],
     problem:
@@ -108,7 +112,7 @@ export const steps = [
 ];
 
 export const about = [
-  "I'm a frontend developer who cares about two things: sites that load fast and sites that make people take action. I build with JavaScript, React, Next.js and Tailwind CSS, and I've shipped four live products, from an AI immigration guide to a free calculator platform.",
+  "I'm a frontend developer who cares about two things: sites that load fast and sites that make people take action. I build with JavaScript, React, Next.js and Tailwind CSS, and I've shipped four live products, from an AI immigration guide to a full pet lovers platform.",
   "I'm always pushing into what's next. Right now I'm going deep into agentic AI: building web apps where AI agents plan tasks, use tools and take action on the user's behalf. It's one of the most challenging and fastest-moving areas in tech, and I enjoy turning complex ideas like that into clear, simple interfaces.",
   "I work with clients remotely, communicate clearly, and keep you updated at every stage. If you have an idea, I'd love to hear it.",
 ];
