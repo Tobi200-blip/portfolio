@@ -39,6 +39,15 @@ export default function Home() {
           <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-300" />
           Available for new projects
         </p>
+
+        <div className="relative mx-auto mt-6 aspect-[4/5] w-44 overflow-hidden rounded-b-2xl rounded-t-[88px] bg-[#145254] ring-1 ring-white/15">
+          {site.photo ? (
+            <Image src={site.photo} alt={site.name} fill sizes="176px" className="object-cover" />
+          ) : (
+            <div className="flex h-full items-end justify-center pb-3 text-xs text-emerald-100/70">[YOUR PHOTO]</div>
+          )}
+        </div>
+
         <div className="mt-8 text-4xl font-semibold leading-[1.1] tracking-tight">
           I build fast websites and web apps that turn visitors into{" "}
           <span className="text-[#ff7a59]">customers.</span>
